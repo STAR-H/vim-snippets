@@ -1,17 +1,11 @@
 ## Main
 # main
 snippet main
-	int main(int argc, char *argv[])
+	int main(int argc, const char *argv[])
 	{
 		${0}
+		return 0;
 	}
-# main(void)
-snippet mainn
-	int main(void)
-	{
-		${0}
-	}
-##
 ## Preprocessor
 # #include <...>
 snippet inc
@@ -234,15 +228,11 @@ snippet fund
 snippet td
 	typedef ${1:int} ${2:MyCustomType};
 # struct
-snippet st
-	/*! \struct $1
-	 *  \brief ${3:Brief struct description}
-	 *
-	 *  ${4:Detailed description}
-	 */
-	struct ${1:`vim_snippets#Filename('$1_t', 'name')`} {
-		${2:Data} /*!< ${4:Description} */
-	}${5: /* optional variable list */};
+snippet struct
+	struct ${1:foo}
+	{
+		$0
+	};
 # typedef struct
 snippet tds
 	/*! \struct $2

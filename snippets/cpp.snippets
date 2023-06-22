@@ -97,20 +97,14 @@ snippet mu
 ##
 ## Class
 # class
-snippet cl
-	/*! \class $1
-	 *  \brief ${3:Brief class description}
-	 *
-	 *  ${4:Detailed description}
-	 */
+snippet class
 	class ${1:`vim_snippets#Filename('$1', 'name')`}
 	{
 	public:
-		$1(${2});
-		virtual ~$1();
+		${0}
 
-	protected:
-		m_${5}; /*!< ${6:Member description} */
+	private:
+
 	};
 # member function implementation
 snippet mfun
@@ -230,3 +224,9 @@ snippet af auto function
 	{
 		${0}
 	};
+
+snippet else
+	else
+	{
+		${0}
+	}
