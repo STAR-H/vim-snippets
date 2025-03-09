@@ -127,8 +127,8 @@ snippet gist-full
 snippet gist-short
 	{% gist ${0:gist_id} %}
 
-snippet img
-	{% img ${1:class} ${2:URL} ${3:width} ${4:height} ${5:title_text} ${0:alt_text} %}
+# snippet img
+# 	{% img ${1:class} ${2:URL} ${3:width} ${4:height} ${5:title_text} ${0:alt_text} %}
 
 snippet youtube
 	{% youtube ${0:video_id} %}
@@ -154,3 +154,33 @@ snippet : Definition list
 snippet :: Alternate definition list
 	$1
 	  - $0
+
+  # self add
+snippet /h1
+    # ${0:Heading1}
+snippet /h2
+    ## ${0:Heading2}
+snippet /h3
+    ### ${0:Heading3}
+snippet /h4
+    #### ${0:Heading4}
+snippet /h5
+    ##### ${0:Heading5}
+snippet /h6
+    ###### ${0:Heading6}
+# code block
+snippet /code
+	\`\`\`${1:language}
+	${2:code}
+	\`\`\`
+
+snippet /link
+    [${1:description}](${2:https://example.com})
+
+snippet /image
+    <img src="${1:https://example.jpg}" alt="${2:图片描述}" style="transform: scale(1);">
+
+snippet /table
+    | ${1:header1}| ${2:header2}| ${3:header3}|
+    | ---         | ---         | ---         |
+    | ${4:xx}     | ${5:xx}     | ${6:xx}     |
